@@ -8,6 +8,3 @@ declare var $:any
 export class AppComponent {
   title = 'EcommerceClient';
 }
-$(document).ready(()=>{
-  alert("Jquery is working")
-})
