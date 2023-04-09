@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 declare var $:any
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ declare var $:any
 })
 export class AppComponent {
   title = 'EcommerceClient';
+  constructor() {
+   
+  }
 }
