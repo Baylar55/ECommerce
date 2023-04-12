@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T278XhS+AdtSYAEK2DfEYnfEut9O1siqVRHHH94i8rq1akqjXCBwIiJ4/G7cntb7ZFTT8zgFvSQ6IW7+ANEJGg==",
+  "dgSpecHash": "Pa5CNXaJ1wvw3M7a6y3yV7dmyPEW6F7KeljpYep2n2fcoqa9h9vsuguV98GTgZVrUUIcawV+AIQFSh1CykLR7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",

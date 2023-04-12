@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj": {}
+    "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj": {
+    "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj",
         "projectName": "EcommerceAPI.Application",
-        "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj"
+              "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj": {
+    "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
         "projectName": "EcommerceAPI.Domain",
-        "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -124,14 +124,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj": {
+    "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj",
         "projectName": "EcommerceAPI.Infrastructure",
-        "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,8 +148,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj"
+              "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj"
               }
             }
           }

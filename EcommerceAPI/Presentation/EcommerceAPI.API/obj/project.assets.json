@@ -1618,11 +1618,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
       "projectName": "EcommerceAPI.API",
-      "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1639,14 +1639,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj"
+            "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Application\\EcommerceAPI.Application.csproj"
             },
-            "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj"
+            "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Infrastructure\\EcommerceAPI.Infrastructure.csproj"
             },
-            "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Persistence\\EcommerceAPI.Persistence.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Persistence\\EcommerceAPI.Persistence.csproj"
+            "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Persistence\\EcommerceAPI.Persistence.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Persistence\\EcommerceAPI.Persistence.csproj"
             }
           }
         }

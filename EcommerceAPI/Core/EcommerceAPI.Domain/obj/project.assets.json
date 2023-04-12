@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
       "projectName": "EcommerceAPI.Domain",
-      "projectPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\EcommerceAPI.Domain.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\MiniEcommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Core\\EcommerceAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

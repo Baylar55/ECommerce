@@ -12,3 +12,7 @@ export class AppComponent {
    
   }
 }
+// $.get("https://localhost:7238/api/Product", data=>{console.log(data);
+// })
+
+
