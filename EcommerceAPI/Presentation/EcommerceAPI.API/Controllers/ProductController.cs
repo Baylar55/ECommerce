@@ -1,4 +1,5 @@
 ﻿using EcommerceAPI.Application.Repositories.Product;
+using EcommerceAPI.Application.RequestParameters;
 using EcommerceAPI.Application.ViewModels.Product;
 using EcommerceAPI.Domain.Entities;
 using EcommerceAPI.Persistence.Repositories.Product;
@@ -21,9 +22,24 @@ namespace EcommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery] Pagination pagination)
         {
-            return Ok(_productReadRepository.GetAll(false));
+            await Task.Delay(1500);
+            var totalCount = _productReadRepository.GetAll(false).Count();
+            var products = _productReadRepository.GetAll(false).Select(p => new
+            {
+                p.Id,
+                p.Name,
+                p.Stock,
+                p.CreatedDate,
+                p.UpdatedDate
+            }).Skip(pagination.Page * pagination.Size).Take(pagination.Size);
+
+            return Ok(new
+            {
+                totalCount,
+                products
+            });
         }
 
         [HttpPost]
