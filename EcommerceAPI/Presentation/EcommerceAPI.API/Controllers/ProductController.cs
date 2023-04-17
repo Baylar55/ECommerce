@@ -24,7 +24,6 @@ namespace EcommerceAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] Pagination pagination)
         {
-            await Task.Delay(1500);
             var totalCount = _productReadRepository.GetAll(false).Count();
             var products = _productReadRepository.GetAll(false).Select(p => new
             {
@@ -66,12 +65,12 @@ namespace EcommerceAPI.API.Controllers
         //    return Ok();
         //}
 
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> Delete(string id)
-        //{
-        //    await _productWriteRepository.RemoveAsync(id);
-        //    await _productWriteRepository.SaveAsync();
-        //    return Ok();
-        //}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            await _productWriteRepository.RemoveAsync(id);
+            await _productWriteRepository.SaveAsync();
+            return Ok();
+        }
     }
 }

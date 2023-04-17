@@ -1,0 +1,11 @@
+mat-list{
+    background-color: #262c35;
+}
+::ng-deep .listitem * {
+    color: #abb4be !important;
+    justify-content: center;
+    cursor: pointer;
+}
+mat-icon{
+    margin-right: 15px;
+}
