@@ -6,19 +6,21 @@ import { MatDialog } from '@angular/material/dialog';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SpinnerType } from 'src/app/base/base.component';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
+import { DialogService } from 'src/app/services/common/dialog.service';
 
 declare var $: any;
 
 @Directive({
   selector: '[appDelete]',
 })
-export class DeleteDirective{
+export class DeleteDirective {
   constructor(
     private element: ElementRef,
     private _renderer: Renderer2,
     private httpClientService: HttpClientService,
-    private spinner:NgxSpinnerService,
+    private spinner: NgxSpinnerService,
     private alertify: AlertifyService,
+    private dialogService: DialogService,
     public dialog: MatDialog
   ) {
     const img = this._renderer.createElement('img');
@@ -35,43 +37,50 @@ export class DeleteDirective{
 
   @HostListener('click')
   async onclick() {
-    this.openDialog(async()=>{
-      this.spinner.show(SpinnerType.BallAtom);
-    const td: HTMLTableCellElement = this.element.nativeElement;
-    this.httpClientService.delete({
-      controller:this.controller
-    },this.id).subscribe(data=>{
-      $(td.parentElement).animate({
-        opacity:0,
-        left:"+=50",
-        height: "toogle"
-        }, 700, ()=>{
-        this.callback.emit();
-        this.alertify.message("Product succesfully removed.",{
-          dismissOthers:true,
-          messageType:MessageType.Success,
-          position:Position.TopRight
-        })
-        });
-      },(errorResponse:HttpErrorResponse)=>{
-        this.spinner.hide(SpinnerType.BallAtom);
-        this.alertify.message("Product couldn't removed.",{
-          dismissOthers:true,
-          messageType:MessageType.Error,
-          position:Position.TopRight
-        })
-      });
+    this.dialogService.openDialog({
+      componentType:DeleteDialogComponent,
+      data:DeleteState.Yes,
+      afterClosed:async () => {
+        this.spinner.show(SpinnerType.BallAtom);
+        const td: HTMLTableCellElement = this.element.nativeElement;
+        this.httpClientService
+          .delete(
+            {
+              controller: this.controller,
+            },
+            this.id
+          )
+          .subscribe(
+            (data) => {
+              $(td.parentElement).animate(
+                {
+                  opacity: 0,
+                  left: '+=50',
+                  height: 'toogle',
+                },
+                700,
+                () => {
+                  this.callback.emit();
+                  this.alertify.message('Product succesfully removed.', {
+                    dismissOthers: true,
+                    messageType: MessageType.Success,
+                    position: Position.TopRight,
+                  });
+                }
+              );
+            },
+            (errorResponse: HttpErrorResponse) => {
+              this.spinner.hide(SpinnerType.BallAtom);
+              this.alertify.message("Product couldn't removed.", {
+                dismissOthers: true,
+                messageType: MessageType.Error,
+                position: Position.TopRight,
+              });
+            }
+          );
+      }
     });
   }
 
-  openDialog(afterClosed: any): void {
-    const dialogRef = this.dialog.open(DeleteDialogComponent, {
-      data: DeleteState.Yes,
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result==DeleteState.Yes)
-        afterClosed();
-    });
-  }
+  
 }
