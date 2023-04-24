@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\wwwroot\\resource\\product-images\\1486449990.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\1486449990.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\wwwroot\\resource\\product-images\\1966703939.png",
       "PackagePath": "staticwebassets\\resource\\product-images\\1966703939.png"
     },
