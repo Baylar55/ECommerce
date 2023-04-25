@@ -1,36 +1,11 @@
-﻿using EcommerceAPI.Application.Services;
-using EcommerceAPI.Infrastructure.Operations;
+﻿using EcommerceAPI.Infrastructure.Operations;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
 namespace EcommerceAPI.Infrastructure.Services
 {
-    public class FileService : IFileService
+    public class FileService
     {
-        private readonly IWebHostEnvironment _hostEnvironment;
-
-        public FileService(IWebHostEnvironment hostEnvironment)
-        {
-            _hostEnvironment = hostEnvironment;
-        }
-
-        public async Task<bool> CopyFileAsync(string path, IFormFile file)
-        {
-            try
-            {
-                using FileStream fileStream = new(path, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
-                await file.CopyToAsync(fileStream);
-                await fileStream.FlushAsync();
-                return true;
-            }
-
-            catch (Exception exception)
-            {
-                //todo log
-                throw exception;
-            }
-        }
-
         private async Task<string> FileRenameAsync(string path, string fileName)
         {
             string extension = Path.GetExtension(fileName);
@@ -51,31 +26,6 @@ namespace EcommerceAPI.Infrastructure.Services
             var biggestNumber = fileNumbers.Max(); //we found the highest number
             biggestNumber++;
             return regulatedFileName + "-" + biggestNumber + extension; //we increment and return
-        }
-
-        public async Task<List<(string fileName, string path)>> UploadAsync(string path, IFormFileCollection files)
-        {
-            string uploadPath = Path.Combine(_hostEnvironment.WebRootPath, path);
-
-            if (!Directory.Exists(uploadPath))
-                Directory.CreateDirectory(uploadPath);
-
-            List<(string fileName, string path)> datas = new();
-
-            List<bool> results = new();
-
-            foreach (IFormFile file in files)
-            {
-                string fileNewName = await FileRenameAsync(uploadPath, file.FileName);
-                bool result = await CopyFileAsync($"{uploadPath}\\{fileNewName}", file);
-                datas.Add((fileNewName, $"{path}\\{fileNewName}"));
-                results.Add(result);
-            }
-
-            if (results.TrueForAll(r => r.Equals(true)))
-                return datas;
-
-            return null;
         }
     }
 }
