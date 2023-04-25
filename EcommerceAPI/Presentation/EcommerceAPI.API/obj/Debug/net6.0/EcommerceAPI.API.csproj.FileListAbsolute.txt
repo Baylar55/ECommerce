@@ -138,3 +138,9 @@ C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\D
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\EcommerceAPI.API.pdb
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\EcommerceAPI.API.genruntimeconfig.cache
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\ref\EcommerceAPI.API.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Azure.Storage.Blobs.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Azure.Storage.Common.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\System.IO.Hashing.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\System.Memory.Data.dll

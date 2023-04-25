@@ -1,6 +1,7 @@
 using EcommerceAPI.Application.Validators.Products;
 using EcommerceAPI.Infrastructure;
 using EcommerceAPI.Infrastructure.Filters;
+using EcommerceAPI.Infrastructure.Services.Storage.Azure;
 using EcommerceAPI.Infrastructure.Services.Storage.Local;
 using EcommerceAPI.Persistence;
 using FluentValidation;
@@ -10,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
-builder.Services.AddStorage<LocalStorage>();
+builder.Services.AddStorage<AzureStorage>();
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
