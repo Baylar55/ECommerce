@@ -68,11 +68,15 @@ C:\Users\user\Desktop\MiniEcommerce\EcommerceAPI\Presentation\EcommerceAPI.API\o
 C:\Users\user\Desktop\MiniEcommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\ref\EcommerceAPI.API.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\appsettings.json
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.staticwebassets.runtime.json
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.exe
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.deps.json
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.runtimeconfig.json
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.pdb
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -134,7 +138,3 @@ C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\D
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\EcommerceAPI.API.pdb
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\EcommerceAPI.API.genruntimeconfig.cache
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\obj\Debug\net6.0\ref\EcommerceAPI.API.dll
-C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\FluentValidation.dll
-C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
-C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
-C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.API.staticwebassets.runtime.json

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uP3RLDQTGiQZlrfBhgDwh0Y4licddcsO3qhXn5PnNN4=",
+  "Hash": "3zlbQEbE5Wr0Zpc2/IdK05BE+E5kgDkBsC0FFihTlbQ=",
   "Source": "EcommerceAPI.API",
   "BasePath": "_content/EcommerceAPI.API",
   "Mode": "Default",
@@ -32,23 +32,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\resource\\product-images\\delete-1.png"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\wwwroot\\resource\\product-images\\delete-2.png",
-      "SourceId": "EcommerceAPI.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\wwwroot\\",
-      "BasePath": "_content/EcommerceAPI.API",
-      "RelativePath": "resource/product-images/delete-2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resource\\product-images\\delete-2.png"
     }
   ]
 }

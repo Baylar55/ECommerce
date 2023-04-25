@@ -1,15 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace EcommerceAPI.Infrastructure.Operations
 {
     public static class NameOperation
     {
         public static string CharacterRegulatory(string name)
+        {
+            name = Regex.Replace(name, @"[\!'""^+%&/\(\)=\?_@\€¨~,;\|<>]", "");
+            name = Regex.Replace(name, @"[Öö]", "o");
+            name = Regex.Replace(name, @"[Üü]", "u");
+            name = Regex.Replace(name, @"[İı]", "i");
+            name = Regex.Replace(name, @"[ğĞ]", "g");
+            name = Regex.Replace(name, @"[çÇ]", "c");
+            name = Regex.Replace(name, @"[şŞ]", "s");
+            name = Regex.Replace(name, @"[æß]", "");
+            name = Regex.Replace(name, @"[âî]", "i");
+            name = Regex.Replace(name, @"\s|\.+", "-");
+
+            return name;
+        }
+        #region 
         //=> name.Replace("\"", "")
         //    .Replace("!", "")
         //    .Replace("'", "")
@@ -51,21 +61,6 @@ namespace EcommerceAPI.Infrastructure.Operations
         //    .Replace("<", "")
         //    .Replace(">", "")
         //    .Replace("|", "");
-        {
-            name = Regex.Replace(name, @"[\!'""^+%&/\(\)=\?_@\€¨~,;\|<>]", "");
-            name = Regex.Replace(name, @"[Öö]", "o");
-            name = Regex.Replace(name, @"[Üü]", "u");
-            name = Regex.Replace(name, @"[İı]", "i");
-            name = Regex.Replace(name, @"[ğĞ]", "g");
-            name = Regex.Replace(name, @"[çÇ]", "c");
-            name = Regex.Replace(name, @"[şŞ]", "s");
-            name = Regex.Replace(name, @"[æß]", "");
-            name = Regex.Replace(name, @"[âî]", "i");
-
-            // Replace spaces and dots with hyphens
-            name = Regex.Replace(name, @"\s|\.+", "-");
-
-            return name;
-        }
+        #endregion
     }
 }

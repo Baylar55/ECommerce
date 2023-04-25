@@ -2,11 +2,6 @@
 using EcommerceAPI.Infrastructure.Operations;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EcommerceAPI.Infrastructure.Services
 {
@@ -73,7 +68,7 @@ namespace EcommerceAPI.Infrastructure.Services
             {
                 string fileNewName = await FileRenameAsync(uploadPath, file.FileName);
                 bool result = await CopyFileAsync($"{uploadPath}\\{fileNewName}", file);
-                datas.Add((fileNewName, $"{uploadPath}\\{fileNewName}"));
+                datas.Add((fileNewName, $"{path}\\{fileNewName}"));
                 results.Add(result);
             }
 
