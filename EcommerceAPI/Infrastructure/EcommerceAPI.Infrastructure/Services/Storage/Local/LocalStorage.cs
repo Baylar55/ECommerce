@@ -18,8 +18,8 @@ namespace EcommerceAPI.Infrastructure.Services.Storage.Local
 
         public List<string> GetFiles(string path)
         {
-            DirectoryInfo directory = new (path);
-            return directory.GetFiles().Select(f => f.Name).ToList();   
+            DirectoryInfo directory = new(path);
+            return directory.GetFiles().Select(f => f.Name).ToList();
         }
 
         public bool HasFile(string path, string fileName)

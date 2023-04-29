@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EcommerceAPI.Application.Abstractions.Storage
+﻿namespace EcommerceAPI.Application.Abstractions.Storage
 {
-    public interface IStorageService:IStorage
+    public interface IStorageService : IStorage
     {
-        public string StorageName { get;}
+        public string StorageName { get; }
     }
 }

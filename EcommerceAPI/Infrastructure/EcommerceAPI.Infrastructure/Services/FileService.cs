@@ -1,6 +1,4 @@
 ﻿using EcommerceAPI.Infrastructure.Operations;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 
 namespace EcommerceAPI.Infrastructure.Services
 {

@@ -1,9 +1,5 @@
 ﻿using EcommerceAPI.Application.Abstractions.Storage;
-using EcommerceAPI.Infrastructure.Enums;
-using EcommerceAPI.Infrastructure.Services;
 using EcommerceAPI.Infrastructure.Services.Storage;
-using EcommerceAPI.Infrastructure.Services.Storage.Azure;
-using EcommerceAPI.Infrastructure.Services.Storage.Local;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EcommerceAPI.Infrastructure
@@ -12,7 +8,7 @@ namespace EcommerceAPI.Infrastructure
     {
         public static void AddInfrastructureServices(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddScoped<IStorageService, StorageService>(); 
+            serviceCollection.AddScoped<IStorageService, StorageService>();
         }
 
         public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : Storage, IStorage
@@ -21,7 +17,7 @@ namespace EcommerceAPI.Infrastructure
         }
 
         #region Add Storage using Enum
-        
+
         //public static void AddStorage<T>(this IServiceCollection serviceCollection, StorageType storageType)
         //{
         //    switch (storageType)
@@ -40,7 +36,7 @@ namespace EcommerceAPI.Infrastructure
         //            break;
         //    }
         //}   
-        
+
         #endregion
     }
 }

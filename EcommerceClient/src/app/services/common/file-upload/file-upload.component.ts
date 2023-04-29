@@ -7,9 +7,11 @@ import { CustomToastrService, ToastrMessageType, ToastrPosition } from '../../ui
 import { MatDialog } from '@angular/material/dialog';
 import { FileUploadDialogComponent, FileUploadDialogState } from 'src/app/dialogs/file-upload-dialog/file-upload-dialog.component';
 import { DialogService } from '../dialog.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { SpinnerType } from 'src/app/base/base.component';
 
 @Component({
-  selector: 'app-file-upload',
+  selector: 'app-file-upload',  
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.scss']
 })
@@ -20,7 +22,8 @@ export class FileUploadComponent {
     private alertify:AlertifyService, 
     private customToastrService: CustomToastrService, 
     private dialog: MatDialog,
-    private dialogService: DialogService) { }
+    private dialogService: DialogService,
+    private spinner: NgxSpinnerService) { }
 
   public files: NgxFileDropEntry[];
 
@@ -38,6 +41,7 @@ export class FileUploadComponent {
       componentType:FileUploadDialogComponent,
       data:FileUploadDialogState.Yes,
       afterClosed:()=>{
+        this.spinner.show(SpinnerType.BallAtom);
         this.httpClientService.post({
         controller:this.options.controller,
         action:this.options.action,
@@ -46,7 +50,8 @@ export class FileUploadComponent {
       }, fileData).subscribe(data=>{
   
         const message: string = "Files succesfully uploaded";
-  
+        
+        this.spinner.hide(SpinnerType.BallAtom);
         if(this.options.isAdminPage){
           this.alertify.message(message,{
             dismissOthers:true,
@@ -63,7 +68,8 @@ export class FileUploadComponent {
       },(errorResponse:HttpErrorResponse)=>{
   
         const message: string = "Something went wrong when files uploaded";
-  
+        
+        this.spinner.hide(SpinnerType.BallAtom);
         if(this.options.isAdminPage){
           this.alertify.message(message,{
             dismissOthers:true,

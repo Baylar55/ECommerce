@@ -12,4 +12,3 @@ namespace EcommerceAPI.Domain.Entities
         public override DateTime UpdatedDate { get => base.UpdatedDate; set => base.UpdatedDate = value; }
     }
 }
- 
