@@ -1,3 +1,4 @@
+using EcommerceAPI.Application;
 using EcommerceAPI.Application.Validators.Products;
 using EcommerceAPI.Infrastructure;
 using EcommerceAPI.Infrastructure.Filters;
@@ -8,6 +9,7 @@ using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
 builder.Services.AddStorage<AzureStorage>();
