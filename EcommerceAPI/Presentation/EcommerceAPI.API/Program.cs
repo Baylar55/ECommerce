@@ -6,6 +6,7 @@ using EcommerceAPI.Infrastructure.Services.Storage.Azure;
 using EcommerceAPI.Persistence;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 

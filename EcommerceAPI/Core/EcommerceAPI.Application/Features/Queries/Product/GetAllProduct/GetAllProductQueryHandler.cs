@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EcommerceAPI.Application.Features.Queries.GetAllProduct
+namespace EcommerceAPI.Application.Features.Queries.Product.GetAllProduct
 {
     public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, GetAllProductQueryResponse>
     {
@@ -31,9 +31,9 @@ namespace EcommerceAPI.Application.Features.Queries.GetAllProduct
             }).ToList();
 
             return new()
-            {          
-                Products=products,
-                TotalCount = totalCount  
+            {
+                Products = products,
+                TotalCount = totalCount
             };
         }
     }
