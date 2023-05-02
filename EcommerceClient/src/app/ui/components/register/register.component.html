@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+            <div class="mb-3 mt-3">
+                <label for="nameSurname" class="form-label">Name & Surname</label>
+                <input type="text" formControlName="nameSurname" class="form-control" id="nameSurname" placeholder="Enter your name and surname" [ngClass]="{'isInvalid': submitted && component.nameSurname.errors}">
+                <div style="color:red;" *ngIf="submitted && component.nameSurname.errors?.required">Name field can't be empty</div>
+                <div style="color:red;" *ngIf="submitted && (component.nameSurname.errors?.maxlength || component.nameSurname.errors?.minlength)">Name & surname length should be between 3 and 40 character</div>
+              </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your email" [ngClass]="{'isInvalid': submitted && component.email.errors}">
+              <div style="color:red;" *ngIf="submitted && component.email.errors?.required">Email field can't be empty</div>
+              <div style="color:red;" *ngIf="submitted && component.email.errors?.email">Please enter valid email</div>
+              <div style="color:red;" *ngIf="submitted && component.email.errors?.maxlength">Email length should be less or equal than 40 character</div>
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" formControlName="username" class="form-control" id="email" placeholder="Enter your username" [ngClass]="{'isInvalid': submitted && component.username.errors}">
+                <div style="color:red;" *ngIf="submitted && component.username.errors?.required">Username field can't be empty</div>
+                <div style="color:red;" *ngIf="submitted && (component.username.errors?.maxlength || component.username.errors?.minlength)">Username length should be between 3 and 40 character</div>
+              </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" id="password" [ngClass]="{'isInvalid': submitted && component.password.errors}">
+            </div>
+            <div class="mb-3">
+                <label for="repeatPassword" class="form-label">Repeat Password</label>
+                <input type="password" formControlName="repeatPassword" class="form-control" id="repeatPassword" [ngClass]="{'isInvalid': submitted && component.repeatPassword.errors}">
+                <div *ngIf="submitted && registerForm.hasError('notSame')" style="color:red;" >Password doesn't match</div>  
+              </div>  
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+ 

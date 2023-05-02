@@ -13,6 +13,6 @@ export class OrdersComponent extends BaseComponent implements OnInit {
   super(spinner);
  }
   ngOnInit(): void {
-   this.showSpinner(SpinnerType.BallScaleMultiple);
+  //  this.showSpinner(SpinnerType.BallScaleMultiple);
   }
 }
