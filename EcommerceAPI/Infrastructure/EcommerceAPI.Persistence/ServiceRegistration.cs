@@ -4,6 +4,7 @@ using EcommerceAPI.Application.Repositories.File;
 using EcommerceAPI.Application.Repositories.InvoiceFile;
 using EcommerceAPI.Application.Repositories.Order;
 using EcommerceAPI.Application.Repositories.Product;
+using EcommerceAPI.Domain.Entities.Identity;
 using EcommerceAPI.Persistence.Contexts;
 using EcommerceAPI.Persistence.Repositories.Customer;
 using EcommerceAPI.Persistence.Repositories.File;
@@ -21,6 +22,14 @@ namespace EcommerceAPI.Persistence
         public static void AddPersistenceServices(this IServiceCollection services)
         {
             services.AddDbContext<EcommerceAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString));
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.Password.RequiredLength = 3;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+            }).AddEntityFrameworkStores<EcommerceAPIDbContext>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
