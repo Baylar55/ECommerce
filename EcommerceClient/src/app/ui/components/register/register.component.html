@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" formControlName="username" class="form-control" id="email" placeholder="Enter your username" [ngClass]="{'isInvalid': submitted && component.username.errors}">
+                <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter your username" [ngClass]="{'isInvalid': submitted && component.username.errors}">
                 <div style="color:red;" *ngIf="submitted && component.username.errors?.required">Username field can't be empty</div>
                 <div style="color:red;" *ngIf="submitted && (component.username.errors?.maxlength || component.username.errors?.minlength)">Username length should be between 3 and 40 character</div>
               </div>
