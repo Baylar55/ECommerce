@@ -1,5 +1,7 @@
 ﻿using EcommerceAPI.Application.Abstractions.Storage;
+using EcommerceAPI.Application.Abstractions.Token;
 using EcommerceAPI.Infrastructure.Services.Storage;
+using EcommerceAPI.Infrastructure.Services.Token;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EcommerceAPI.Infrastructure
@@ -9,6 +11,7 @@ namespace EcommerceAPI.Infrastructure
         public static void AddInfrastructureServices(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddScoped<IStorageService, StorageService>();
+            serviceCollection.AddScoped<ITokenHandler, TokenHandler>();
         }
 
         public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : Storage, IStorage
