@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
 import { SpinnerType } from 'src/app/base/base.component';
 import { MessageType } from 'src/app/services/admin/alertify.service';
+import { _isAuthenticated } from 'src/app/services/common/auth.service';
 import { CustomToastrService, ToastrMessageType, ToastrPosition } from 'src/app/services/ui/custom-toastr.service';
 
 @Injectable({
@@ -15,16 +16,16 @@ export class AuthGuard implements CanActivate {
 
   canActivate( route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
     this.spinner.show(SpinnerType.BallAtom)
-    const token: string = localStorage.getItem("accessToken");
+    // const token: string = localStorage.getItem("accessToken");
 
-    let expired: boolean;
-    try {
-      expired = this.jwtHelper.isTokenExpired(token);
-    } catch (error) {
-      expired = true;
-    }
+    // let expired: boolean;
+    // try {
+    //   expired = this.jwtHelper.isTokenExpired(token);
+    // } catch (error) {
+    //   expired = true;
+    // }
     
-    if(!token || expired){
+    if(!_isAuthenticated){
       this.router.navigate(['login'], { queryParams: { returnUrl: state.url } });
       this.toastrService.message("You must login", "Unauthorized access",{
         messageType:ToastrMessageType.Warning,
