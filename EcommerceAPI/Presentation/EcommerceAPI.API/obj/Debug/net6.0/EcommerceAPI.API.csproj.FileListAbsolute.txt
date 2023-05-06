@@ -159,3 +159,8 @@ C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\D
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Newtonsoft.Json.dll
