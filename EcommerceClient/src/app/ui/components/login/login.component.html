@@ -10,8 +10,9 @@
       <input #txtPassword type="password" class="form-control" id="password" placeholder="Enter your password">
     </div>
 
-    <asl-google-signin-button></asl-google-signin-button>
-    
+    <asl-google-signin-button style="display: inline-block;"></asl-google-signin-button>
+    <img src="../../../../assets/facebook.png" style="width: 32px; height: 32px; margin-inline: 10px; margin-bottom: 20px; cursor: pointer;" (click)="facebookLogin()">
+
     <button type="submit" class="btn btn-primary" (click)="login(txtUsernameOrEmail.value, txtPassword.value)">Login</button>
   </div>
   <div class="col-md-3"></div>

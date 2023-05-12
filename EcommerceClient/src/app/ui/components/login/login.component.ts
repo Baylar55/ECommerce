@@ -1,12 +1,14 @@
-import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import { FacebookLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Observable, firstValueFrom } from 'rxjs';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { TokenResponse } from 'src/app/contracts/token/tokenResponse';
 import { AuthService } from 'src/app/services/common/auth.service';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
 import { UserService } from 'src/app/services/common/models/user.service';
+import { CustomToastrService } from 'src/app/services/ui/custom-toastr.service';
 
 @Component({
   selector: 'app-login',
@@ -21,11 +23,22 @@ export class LoginComponent extends BaseComponent{
       console.log(user);
       
       this.showSpinner(SpinnerType.BallAtom);
-      await userService.googleLogin(user, ()=>{
-        authService.identityCheck();
-        this.hideSpinner(SpinnerType.BallAtom)
-      })
+     switch(user.provider){
+      case "Google":
+        await userService.googleLogin(user, ()=>{                    
+        this.authService.identityCheck();
+        this.hideSpinner(SpinnerType.BallAtom);
+        })
+        break;
+      case "Facebook":
+        await userService.facebookLogin(user,()=>{       
+        this.authService.identityCheck();
+        this.hideSpinner(SpinnerType.BallAtom);
+        })
+        break;
+     }
     });
+    
   }
 
   async login(usernameOrEmail:string, password: string){
@@ -42,5 +55,9 @@ export class LoginComponent extends BaseComponent{
 
       this.hideSpinner(SpinnerType.BallAtom)
     });
+  }
+
+  facebookLogin() {
+    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 }
