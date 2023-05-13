@@ -19,7 +19,7 @@ namespace EcommerceAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public Application.DTOs.Token CreateAccessToken(int minute)
+        public Application.DTOs.Token CreateAccessToken(int second)
         {
             Application.DTOs.Token token = new ();
 
@@ -27,7 +27,7 @@ namespace EcommerceAPI.Infrastructure.Services.Token
 
             SigningCredentials credentials = new(securityKey, SecurityAlgorithms.HmacSha256);
 
-            token.ExpirationDate = DateTime.UtcNow.AddMinutes(minute);
+            token.ExpirationDate = DateTime.UtcNow.AddSeconds(second);
 
             JwtSecurityToken securityToken = new
             (

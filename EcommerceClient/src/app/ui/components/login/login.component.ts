@@ -7,6 +7,7 @@ import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { TokenResponse } from 'src/app/contracts/token/tokenResponse';
 import { AuthService } from 'src/app/services/common/auth.service';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
+import { UserAuthService } from 'src/app/services/common/models/user-auth.service';
 import { UserService } from 'src/app/services/common/models/user.service';
 import { CustomToastrService } from 'src/app/services/ui/custom-toastr.service';
 
@@ -16,7 +17,7 @@ import { CustomToastrService } from 'src/app/services/ui/custom-toastr.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent extends BaseComponent{
-  constructor(private userService: UserService, spinner:NgxSpinnerService, private authService:AuthService, private activatedRoute:ActivatedRoute, private router: Router, private socialAuthService:SocialAuthService, private httpClientService:HttpClientService)
+  constructor(private userAuthService: UserAuthService, spinner:NgxSpinnerService, private authService:AuthService, private activatedRoute:ActivatedRoute, private router: Router, private socialAuthService:SocialAuthService, private httpClientService:HttpClientService)
   { 
     super(spinner)
     socialAuthService.authState.subscribe(async(user:SocialUser)=>{
@@ -25,13 +26,13 @@ export class LoginComponent extends BaseComponent{
       this.showSpinner(SpinnerType.BallAtom);
      switch(user.provider){
       case "Google":
-        await userService.googleLogin(user, ()=>{                    
+        await userAuthService.googleLogin(user, ()=>{                    
         this.authService.identityCheck();
         this.hideSpinner(SpinnerType.BallAtom);
         })
         break;
       case "Facebook":
-        await userService.facebookLogin(user,()=>{       
+        await userAuthService.facebookLogin(user,()=>{       
         this.authService.identityCheck();
         this.hideSpinner(SpinnerType.BallAtom);
         })
@@ -43,7 +44,7 @@ export class LoginComponent extends BaseComponent{
 
   async login(usernameOrEmail:string, password: string){
     this.showSpinner(SpinnerType.BallAtom);
-    await this.userService.login(usernameOrEmail, password, ()=>
+    await this.userAuthService.login(usernameOrEmail, password, ()=>
     {
       this.authService.identityCheck();
 

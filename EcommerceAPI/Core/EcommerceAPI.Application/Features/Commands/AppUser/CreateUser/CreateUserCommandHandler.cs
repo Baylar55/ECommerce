@@ -1,43 +1,35 @@
-﻿using EcommerceAPI.Application.Exceptions;
-using EcommerceAPI.Domain.Entities.Identity;
+﻿using EcommerceAPI.Application.Abstractions.Services;
+using EcommerceAPI.Application.DTOs.User;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EcommerceAPI.Application.Features.Commands.AppUser.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
-        private readonly UserManager<Domain.Entities.Identity.AppUser> _userManager;
+        private readonly IUserService _userService;
 
-        public CreateUserCommandHandler(UserManager<Domain.Entities.Identity.AppUser> userManager)
+        public CreateUserCommandHandler(IUserService userService)
         {
-            _userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            IdentityResult result = await _userManager.CreateAsync(new()
+
+            CreateUserResponseDTO response = await _userService.CreateAsync(new()
             {
-                Id = Guid.NewGuid().ToString(),
-                NameSurname = request.NameSurname,
-                UserName = request.Username,
                 Email = request.Email,
-            }, request.Password);
+                NameSurname = request.NameSurname,
+                Password = request.Password,
+                RepeatPassword = request.RepeatPassword,
+                Username = request.Username,
+            });
 
-            CreateUserCommandResponse response = new() { IsSucceeded = result.Succeeded };
-
-            if (result.Succeeded)
-                response.Message = "User is created successfully";
-            else
-                foreach (var error in result.Errors)
-                    response.Message += $"{error.Code} - {error.Description}\n";
-
-            return response;
+            return new()
+            {
+                IsSucceeded = response.Succeeded,
+                Message = response.Message,
+            };
 
         }
     }
