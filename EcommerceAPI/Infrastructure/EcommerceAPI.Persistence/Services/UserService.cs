@@ -1,5 +1,6 @@
 ﻿using EcommerceAPI.Application.Abstractions.Services;
 using EcommerceAPI.Application.DTOs.User;
+using EcommerceAPI.Application.Exceptions;
 using EcommerceAPI.Application.Features.Commands.AppUser.CreateUser;
 using EcommerceAPI.Domain.Entities.Identity;
 using MediatR;
@@ -15,7 +16,7 @@ namespace EcommerceAPI.Persistence.Services
     public class UserService : IUserService
     {
         private readonly UserManager<AppUser> _userManager;
-        public UserService(UserManager<Domain.Entities.Identity.AppUser> userManager)
+        public UserService(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
         }
@@ -39,6 +40,18 @@ namespace EcommerceAPI.Persistence.Services
                     response.Message += $"{error.Code} - {error.Description}\n"; 
 
             return response;
+        }
+
+        public async Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
+        {            
+            if (user != null)
+            {
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenEndDate = accessTokenDate.AddSeconds(addOnAccessTokenDate);
+                await _userManager.UpdateAsync(user);
+            }
+            else
+                throw new NotFoundUserException();
         }
     }
 }

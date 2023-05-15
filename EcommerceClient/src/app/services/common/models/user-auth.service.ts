@@ -20,6 +20,7 @@ export class UserAuthService {
     const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
     if (tokenResponse) {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
       this.toastrService.message("Authentication is succeeded.", "Authenticated", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
@@ -36,6 +37,7 @@ export class UserAuthService {
     const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
     if (tokenResponse) {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
       this.toastrService.message("Google login is succeeded.", "Gogle Login", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
@@ -55,7 +57,7 @@ export class UserAuthService {
 
     if (tokenResponse) {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
-
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
       this.toastrService.message("Facebook login is succeeded.", "Facebook Login", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
@@ -64,4 +66,20 @@ export class UserAuthService {
 
     callBackFunction();
   }
+
+  async refreshTokenLogin(refreshToken: string, callBackFunction?: () => void):Promise<any>{
+    const observable: Observable<any | TokenResponse > = this.httpClientService.post({
+      action:"refreshTokenLogin",
+      controller:"auth",
+    }, {refreshToken: refreshToken});
+    
+    const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
+
+    if(tokenResponse){
+      localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);      
+    }
+    callBackFunction();
+  }
+
 }
