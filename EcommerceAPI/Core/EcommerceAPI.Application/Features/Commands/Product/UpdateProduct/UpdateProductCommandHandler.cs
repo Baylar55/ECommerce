@@ -1,5 +1,6 @@
 ﻿using EcommerceAPI.Application.Repositories.Product;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,10 @@ namespace EcommerceAPI.Application.Features.Commands.Product.UpdateProduct
         private readonly IProductReadRepository _productReadRepository;
         private readonly IProductWriteRepository _productWriteRepository;
 
-        public UpdateProductCommandHandler(IProductReadRepository productReadRepository,IProductWriteRepository productWriteRepository)
+        public UpdateProductCommandHandler(IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository)
         {
             _productReadRepository = productReadRepository;
-            _productWriteRepository = productWriteRepository;
+            _productWriteRepository = productWriteRepository;            
         }
 
         public async Task<UpdateProductCommandResponse> Handle(UpdateProductCommandRequest request, CancellationToken cancellationToken)
@@ -25,7 +26,7 @@ namespace EcommerceAPI.Application.Features.Commands.Product.UpdateProduct
             product.Price = request.Price;
             product.Stock = request.Stock;
             product.Name = request.Name;
-            await _productWriteRepository.SaveAsync();
+            await _productWriteRepository.SaveAsync();            
             return new();
         }
     }
