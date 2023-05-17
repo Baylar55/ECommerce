@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wDsj2mFYDQKOwK3NHHeBnEnh9Kz1+eANMtpvRpF9sc+QDtOovCLSUxcxcmhB6U+L/H3FQzWRWtDSiNGCu1nJMg==",
+  "dgSpecHash": "Ac2VpAvxnzdW0ZZEONiOT3q8ZTDeNBliplHXdAOdLoQuhc+A4D1bszvrFYfbLOCkW1uUeRGcrAS8nXAu8QecQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Presentation\\EcommerceAPI.API\\EcommerceAPI.API.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\user\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.16\\microsoft.aspnetcore.authentication.google.6.0.16.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.16\\microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",

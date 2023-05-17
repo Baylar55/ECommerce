@@ -69,7 +69,7 @@ export class UserAuthService {
 
   async refreshTokenLogin(refreshToken: string, callBackFunction?: () => void):Promise<any>{
     const observable: Observable<any | TokenResponse > = this.httpClientService.post({
-      action:"refreshTokenLogin",
+      action:"refreshtokenlogin",
       controller:"auth",
     }, {refreshToken: refreshToken});
     

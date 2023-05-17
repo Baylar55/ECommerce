@@ -11,6 +11,7 @@
           "EcommerceAPI.Application": "1.0.0",
           "EcommerceAPI.Infrastructure": "1.0.0",
           "EcommerceAPI.Persistence": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.Google": "6.0.16",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.16",
           "Microsoft.EntityFrameworkCore.Design": "7.0.4",
           "Serilog": "2.12.0",
@@ -170,6 +171,14 @@
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.1.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/6.0.16": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "6.0.16.0",
+            "fileVersion": "6.0.1623.17406"
           }
         }
       },
@@ -1027,6 +1036,13 @@
       "sha512": "sha512-RW3etRuy6Xp63cgqfC0r/ITOtUT0f9ymJl1+1XZdzsYUsfv7WBPC2kXGOP8IYpY/6c4Q6805vbIW/88DopUs3w==",
       "path": "mediatr.extensions.microsoft.dependencyinjection/11.1.0",
       "hashPath": "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/6.0.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MbWGOoW1XGcy6aFEmXaQwztyhR+VjmvhSZW+d8/0xE5PO9S9nWUYGRNEPDqdk95vxxbQQHmBDG+nFYoeh8FmgA==",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.16",
+      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.16.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.16": {
       "type": "package",
