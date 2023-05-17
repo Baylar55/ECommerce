@@ -177,3 +177,5 @@ C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\D
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Serilog.Sinks.PostgreSQL.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
 C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.SignalR.dll
+C:\Users\user\Desktop\ECommerce\EcommerceAPI\Presentation\EcommerceAPI.API\bin\Debug\net6.0\EcommerceAPI.SignalR.pdb

@@ -1494,6 +1494,22 @@
         "runtime": {
           "bin/placeholder/EcommerceAPI.Persistence.dll": {}
         }
+      },
+      "EcommerceAPI.SignalR/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EcommerceAPI.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EcommerceAPI.SignalR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EcommerceAPI.SignalR.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -3610,6 +3626,11 @@
       "type": "project",
       "path": "../../Infrastructure/EcommerceAPI.Persistence/EcommerceAPI.Persistence.csproj",
       "msbuildProject": "../../Infrastructure/EcommerceAPI.Persistence/EcommerceAPI.Persistence.csproj"
+    },
+    "EcommerceAPI.SignalR/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/EcommerceAPI.SignalR/EcommerceAPI.SignalR.csproj",
+      "msbuildProject": "../../Infrastructure/EcommerceAPI.SignalR/EcommerceAPI.SignalR.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3617,6 +3638,7 @@
       "EcommerceAPI.Application >= 1.0.0",
       "EcommerceAPI.Infrastructure >= 1.0.0",
       "EcommerceAPI.Persistence >= 1.0.0",
+      "EcommerceAPI.SignalR >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.Google >= 6.0.16",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.16",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
@@ -3662,6 +3684,9 @@
             },
             "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Persistence\\EcommerceAPI.Persistence.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.Persistence\\EcommerceAPI.Persistence.csproj"
+            },
+            "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.SignalR\\EcommerceAPI.SignalR.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.SignalR\\EcommerceAPI.SignalR.csproj"
             }
           }
         }

@@ -6,6 +6,7 @@ using EcommerceAPI.Infrastructure;
 using EcommerceAPI.Infrastructure.Filters;
 using EcommerceAPI.Infrastructure.Services.Storage.Azure;
 using EcommerceAPI.Persistence;
+using EcommerceAPI.SignalR;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -23,11 +24,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
+builder.Services.AddSignalRServices();
 builder.Services.AddStorage<AzureStorage>();
 
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
-policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
+policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
 
 #region Deprecated 
 //builder.Services.AddControllers(options=>options.Filters.Add<ValidationFilter>())
@@ -121,5 +123,7 @@ app.Use(async (context, next) =>
 });
 
 app.MapControllers();
+
+app.MapHubs();
 
 app.Run();
