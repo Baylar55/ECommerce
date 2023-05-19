@@ -1,0 +1,13 @@
+.card-container{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .card{
+        min-width:325px !important;
+        margin-right: 15px;
+        margin-block: 10px;
+    }
+}
+.pagination-nav{
+    margin-left: 40%;
+}

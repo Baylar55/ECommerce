@@ -16,8 +16,8 @@ export class DashboardComponent extends BaseComponent implements OnInit{
     signalRService.start(HubUrls.ProductHub);
   }
   ngOnInit(): void {
-    this.signalRService.on(ReceiveFunctions.ProductAddedMessageReceiveFunction, message => {
-      alert(message);
-    });
+    // this.signalRService.on(ReceiveFunctions.ProductAddedMessageReceiveFunction, message => {
+    //   alert(message);
+    // });
   }
 }
