@@ -15,7 +15,7 @@ namespace EcommerceAPI.API.Controllers
         }
 
         [HttpGet("[action]")]
-        public ActionResult GetBaseUrl() 
+        public ActionResult GetBaseStorageUrl() 
         {
             return Ok(new
             {

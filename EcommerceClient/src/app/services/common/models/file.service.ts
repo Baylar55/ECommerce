@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, firstValueFrom } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 import { HttpClientService } from '../http-client.service';
 import { BaseUrl } from 'src/app/contracts/base-url';
 
@@ -7,13 +7,13 @@ import { BaseUrl } from 'src/app/contracts/base-url';
   providedIn: 'root'
 })
 export class FileService {
-    constructor(private httpClientService: HttpClientService) { }
+  constructor(private httpClientService: HttpClientService) { }
 
-   async getBaseStorageUrl(): Promise<BaseUrl>{
-        const getObservable: Observable<BaseUrl> = this.httpClientService.get<BaseUrl>({
-            controller:"files",
-            action:"GetBaseStorageUrl"
-        });
-        return await firstValueFrom(getObservable);
-    }
+  async getBaseStorageUrl(): Promise<BaseUrl> {
+    const getObservable: Observable<BaseUrl> = this.httpClientService.get<BaseUrl>({
+      controller: "file",
+      action: "GetBaseStorageUrl"
+    });
+    return await firstValueFrom(getObservable);
+  }
 }

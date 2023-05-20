@@ -74,13 +74,13 @@ export class ProductService {
     successCallBack();
   }
 
-  async changeShowcaseImage(imageId: string, productId: string, successCallBack?: ()=> void):Promise<void>{
+  async changeShowcaseImage(imageId: string, productId: string, successCallBack?: () => void): Promise<void> {
     const changeShowcaseImageObservable = this.httpClientService.get({
-      controller:"product",
-      action:"ChangeShowcaseImage",
-      queryString:`imageId=${imageId}$productId=${productId}`,
+      controller: "product",
+      action: "ChangeShowcaseImage",
+      queryString: `imageId=${imageId}&productId=${productId}`
     });
-    await firstValueFrom(changeShowcaseImageObservable);  
+    await firstValueFrom(changeShowcaseImageObservable);
     successCallBack();
   }
 }

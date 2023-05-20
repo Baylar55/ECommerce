@@ -18,6 +18,21 @@ namespace EcommerceAPI.Persistence.Contexts
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
 
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Order>()
+                   .HasKey(b => b.Id);
+
+            builder.Entity<Basket>()
+                   .HasOne(b => b.Order)
+                   .WithOne(o => o.Basket)
+                   .HasForeignKey<Order>(b => b.Id);
+
+            base.OnModelCreating(builder);
+        }
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             //ChangeTracker - is the property that enables the capture of the changes made on the Entities or the newly added data. It allows us to capture and obtain the data tracked in update operations.
