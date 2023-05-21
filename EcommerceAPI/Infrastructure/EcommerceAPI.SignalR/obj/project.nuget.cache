@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MIEdVaJFy4c5ZWzpTseA4jP0+MlBewFfgggpcyaLkE6aahxp+cNcO+Kf3DHOm3hLqJZYtyp8o6yf/Wn3DLzRgQ==",
+  "dgSpecHash": "T2sAF23Ly6kChhGp6P97mHmyCL7Q9Qmk4E0kSjwMdVlvNyr9jDuMMdClWAHXAMzpv68Sn+ESSXH9nLvsO6LDlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\ECommerce\\EcommerceAPI\\Infrastructure\\EcommerceAPI.SignalR\\EcommerceAPI.SignalR.csproj",
   "expectedPackageFiles": [
