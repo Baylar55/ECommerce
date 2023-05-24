@@ -12,8 +12,8 @@ import { List_Product_Image } from 'src/app/contracts/list_product_image';
 export class ProductService {
 
   constructor(private httpClientService: HttpClientService) { }
-
   create(product: CreateProduct, successCallBack?: ()=> void, errorCallBack?: (errorMessage: string)=> void){
+  debugger;
     this.httpClientService
       .post(
         {

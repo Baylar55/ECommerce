@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { List_Basket_Item } from 'src/app/contracts/basket/list-basket-item';
 import { UpdateBasketItem } from 'src/app/contracts/basket/update-basket-item';
+import { Create_Order } from 'src/app/contracts/order/create_order';
 import { BasketService } from 'src/app/services/common/models/basket.service';
+import { OrderService } from 'src/app/services/common/models/order.service';
+import { CustomToastrService, ToastrMessageType, ToastrPosition } from 'src/app/services/ui/custom-toastr.service';
 
 declare var $: any;
 
@@ -14,7 +18,7 @@ declare var $: any;
 })
 export class BasketsComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService, private basketService: BasketService){
+  constructor(spinner: NgxSpinnerService, private basketService: BasketService, private orderService: OrderService, private toastrService: CustomToastrService, private router: Router){
     super(spinner)
   }
   
@@ -42,5 +46,19 @@ export class BasketsComponent extends BaseComponent implements OnInit {
     await this.basketService.remove(basketItemId);
 
     $("."+basketItemId).fadeOut(500,()=>this.hideSpinner(SpinnerType.BallAtom));
+  }
+
+  async completeShopping(){
+    this.showSpinner(SpinnerType.BallAtom);
+    const order: Create_Order = new Create_Order();
+    order.address = "Baku";
+    order.description = "Azerbaijan";
+    await this.orderService.create(order);
+    this.hideSpinner(SpinnerType.BallAtom);
+    this.toastrService.message("Order received!", "Order created!", {
+      messageType: ToastrMessageType.Info,
+      position: ToastrPosition.TopRight
+    })
+    this.router.navigate(["/"]);
   }
 }

@@ -23,7 +23,7 @@
                   <input type="number" [value]="basketItem.quantity" style="width:60px;" data-id="{{basketItem.basketItemId}}" (change)="changeQuantity($event)" />
                 </td>
                 <td>
-                  <!-- <button type="button" class="btn btn-danger" (click)="removeBasketItem(basketItem.basketItemId)">X</button> -->
+                  <button type="button" class="btn btn-danger" (click)="removeBasketItem(basketItem.basketItemId)">X</button>
                 </td>
               </tr>
             </tbody>
@@ -31,6 +31,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Complete shopping</button>
+          <button type="button" class="btn btn-success" (click)="completeShopping()">Complete shopping</button>
         </div>
       </div>
