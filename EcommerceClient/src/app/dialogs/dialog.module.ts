@@ -9,8 +9,9 @@ import { FileUploadModule } from '../services/common/file-upload/file-upload.mod
 import { FormsModule } from '@angular/forms';
 import { BasketItemRemoveDialogComponent } from './basket-item-remove-dialog/basket-item-remove-dialog.component';
 import { ShoppingCompleteteDialogComponent } from './shopping-completete-dialog/shopping-completete-dialog.component';
-
-
+import { OrderDetailDialogComponent } from './order-detail-dialog/order-detail-dialog.component';
+import { MatTableModule } from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ShoppingCompleteteDialogComponent } from './shopping-completete-dialog/
     SelectProductImageDialogComponent,
     BasketItemRemoveDialogComponent,
     ShoppingCompleteteDialogComponent,
+    OrderDetailDialogComponent,
   ],
   imports: [ 
     CommonModule,
@@ -25,6 +27,8 @@ import { ShoppingCompleteteDialogComponent } from './shopping-completete-dialog/
     MatButtonModule,
     FileUploadModule,
     MatCardModule,
+    MatTableModule,
+    MatToolbarModule,
     FormsModule 
   ]
 })
