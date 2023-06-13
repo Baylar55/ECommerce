@@ -9,11 +9,14 @@
       <label for="password" class="form-label">Password</label>
       <input #txtPassword type="password" class="form-control" id="password" placeholder="Enter your password">
     </div>
-
-    <asl-google-signin-button style="display: inline-block;"></asl-google-signin-button>
-    <img src="../../../../assets/facebook.png" style="width: 32px; height: 32px; margin-inline: 10px; margin-bottom: 20px; cursor: pointer;" (click)="facebookLogin()">
-
-    <button type="submit" class="btn btn-primary" (click)="login(txtUsernameOrEmail.value, txtPassword.value)">Login</button>
+    <div class="external-login">
+    <asl-google-signin-button></asl-google-signin-button>
+    <img src="../../../../assets/facebook.png" class="fb-login" (click)="facebookLogin()">
+    </div>
+    <div>
+    <button type="submit" class="btn btn-primary btn-login" (click)="login(txtUsernameOrEmail.value, txtPassword.value)">Login</button>
+    <a class="btn btn-forgot-psw" routerLink="/password-reset" (click)="login(txtUsernameOrEmail.value, txtPassword.value)">Forgot password</a>
+    </div>
   </div>
   <div class="col-md-3"></div>
 </div>

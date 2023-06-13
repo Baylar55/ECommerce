@@ -2,6 +2,7 @@
 using EcommerceAPI.Application.DTOs.User;
 using EcommerceAPI.Application.Exceptions;
 using EcommerceAPI.Application.Features.Commands.AppUser.CreateUser;
+using EcommerceAPI.Application.Helpers;
 using EcommerceAPI.Domain.Entities.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -37,13 +38,13 @@ namespace EcommerceAPI.Persistence.Services
                 response.Message = "User is created successfully";
             else
                 foreach (var error in result.Errors)
-                    response.Message += $"{error.Code} - {error.Description}\n"; 
+                    response.Message += $"{error.Code} - {error.Description}\n";
 
             return response;
         }
 
-        public async Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
-        {            
+        public async Task UpdateRefreshTokenAsync(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
+        {
             if (user != null)
             {
                 user.RefreshToken = refreshToken;
@@ -52,6 +53,20 @@ namespace EcommerceAPI.Persistence.Services
             }
             else
                 throw new NotFoundUserException();
+        }
+
+        public async Task UpdatePasswordAsync(string userId, string resetToken, string newPassword)
+        {
+            AppUser? user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                resetToken = resetToken.UrlDecode();
+                IdentityResult result = await _userManager.ResetPasswordAsync(user, resetToken, newPassword);
+                if (result.Succeeded)
+                    await _userManager.UpdateSecurityStampAsync(user);
+                else 
+                    throw new PasswordChangeFailedException();
+            }
         }
     }
 }

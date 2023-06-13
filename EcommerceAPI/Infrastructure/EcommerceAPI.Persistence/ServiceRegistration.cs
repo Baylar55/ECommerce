@@ -20,6 +20,7 @@ using EcommerceAPI.Persistence.Repositories.Order;
 using EcommerceAPI.Persistence.Repositories.Product;
 using EcommerceAPI.Persistence.Repositories.ProductImageFile;
 using EcommerceAPI.Persistence.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -37,7 +38,8 @@ namespace EcommerceAPI.Persistence
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
-            }).AddEntityFrameworkStores<EcommerceAPIDbContext>();
+            }).AddEntityFrameworkStores<EcommerceAPIDbContext>()
+              .AddDefaultTokenProviders();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
