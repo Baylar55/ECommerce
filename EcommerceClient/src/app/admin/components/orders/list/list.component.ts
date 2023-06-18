@@ -18,7 +18,7 @@ export class ListComponent extends BaseComponent implements OnInit{
   constructor(private orderService: OrderService, spinner: NgxSpinnerService, private alertifyService:AlertifyService, private dialogService: DialogService) {
     super(spinner)
    }
-   displayedColumns: string[] = ['orderCode', 'username', 'totalPrice', 'createdDate', 'viewDetail', 'delete'];
+   displayedColumns: string[] = ['orderCode', 'username', 'totalPrice', 'createdDate', 'completed', 'viewDetail', 'delete'];
    dataSource: MatTableDataSource<List_Order> = null;
    @ViewChild(MatPaginator) paginator: MatPaginator;
   

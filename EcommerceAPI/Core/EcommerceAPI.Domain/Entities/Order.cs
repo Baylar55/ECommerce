@@ -9,6 +9,8 @@ namespace EcommerceAPI.Domain.Entities
         public Basket Basket { get; set; }
         public string OrderCode { get; set; }
 
+        public CompletedOrder CompletedOrder { get; set; }
+
         //public Guid BasketId { get; set; }        
         //public ICollection<Product> Products { get; set; }
         //public Customer Customer { get; set; }
