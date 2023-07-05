@@ -54,9 +54,9 @@ namespace EcommerceAPI.Infrastructure.Services
             await SendMailAsync(to, "Password reset request", mail.ToString());
         }
 
-        public async Task SendCompletedOrderMailAsync(string to, string username, string userSurname, string orderCode, DateTime orderDate)
+        public async Task SendCompletedOrderMailAsync(string to, string username, string orderCode, DateTime orderDate)
         {
-            string mail = $"Hi, {username} {userSurname}" + $" your order with code {orderCode} that you placed on {orderDate} has been completed and given to the cargo company.";
+            string mail = $"Hi, {username}" + $" your order with code {orderCode} that you placed on {orderDate} has been completed and given to the cargo company.";
 
             await SendMailAsync(to, $"Completed your order with code {orderCode}", mail);
         }
