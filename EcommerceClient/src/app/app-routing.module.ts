@@ -14,9 +14,11 @@ const routes: Routes = [
       {path: "products", loadChildren: ()=>import("./admin/components/products/products.module")
         .then(module=>module.ProductsModule), canActivate:[AuthGuard] },
       {path: "orders", loadChildren: ()=>import("./admin/components/orders/orders.module")
-        .then(module=>module.OrdersModule), canActivate:[AuthGuard] }
+        .then(module=>module.OrdersModule), canActivate:[AuthGuard] },
+      {path: "authorize-menu", loadChildren: ()=>import("./admin/components/authorize-menu/authorize-menu.module")
+        .then(module=>module.AuthorizeMenuModule), canActivate:[AuthGuard] },
     ],canActivate:[AuthGuard]
-  },
+},
   {path: "", component: HomeComponent },
   {path:"basket", loadChildren: ()=>import("./ui/components/baskets/baskets.module")
     .then(module=>module.BasketsModule)},
