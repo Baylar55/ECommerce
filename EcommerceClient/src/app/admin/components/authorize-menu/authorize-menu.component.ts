@@ -80,7 +80,7 @@ export class AuthorizeMenuComponent extends BaseComponent implements OnInit{
   assignRole(code: string, name: string){
     this.dialogService.openDialog({
       componentType: AuthorizeMenuDialogComponent,
-      data: { code, name }
+      data: { code, name },
       options: {
         width: "750px"
       },

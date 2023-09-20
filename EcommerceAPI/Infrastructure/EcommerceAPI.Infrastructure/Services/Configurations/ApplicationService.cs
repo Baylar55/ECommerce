@@ -42,7 +42,7 @@ namespace EcommerceAPI.Infrastructure.Services.Configurations
 
                                 var authorizeDefinitionAttribute = attributes.FirstOrDefault(a => a.GetType() == typeof(AuthorizeDefinitionAttribute)) as AuthorizeDefinitionAttribute;
 
-                                if (menus.Any(m => m.Name == authorizeDefinitionAttribute.Menu))
+                                if (!menus.Any(m => m.Name == authorizeDefinitionAttribute.Menu))
                                 {
                                     menu = new() { Name = authorizeDefinitionAttribute.Menu };
                                     menus.Add(menu);    

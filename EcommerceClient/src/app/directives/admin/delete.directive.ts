@@ -61,7 +61,7 @@ export class DeleteDirective {
                 700,
                 () => {
                   this.callback.emit();
-                  this.alertify.message('Product succesfully removed.', {
+                  this.alertify.message(`${this.controller == 'role' ? 'Role' : 'Product'} succesfully removed.`, {
                     dismissOthers: true,
                     messageType: MessageType.Success,
                     position: Position.TopRight,
