@@ -1,0 +1,13 @@
+.dialog-box{
+    width: 90%;
+    margin-inline: 15px;
+    p{
+        margin-left: 30px;
+    }
+    mat-selection-list{
+        margin-left: 15px;
+    }
+}
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+    top: 5px;
+}

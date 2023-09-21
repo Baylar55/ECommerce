@@ -5,8 +5,10 @@ using EcommerceAPI.Application.Repositories.Basket;
 using EcommerceAPI.Application.Repositories.BasketItem;
 using EcommerceAPI.Application.Repositories.CompletedOrder;
 using EcommerceAPI.Application.Repositories.Customer;
+using EcommerceAPI.Application.Repositories.Endpoint;
 using EcommerceAPI.Application.Repositories.File;
 using EcommerceAPI.Application.Repositories.InvoiceFile;
+using EcommerceAPI.Application.Repositories.Menu;
 using EcommerceAPI.Application.Repositories.Order;
 using EcommerceAPI.Application.Repositories.Product;
 using EcommerceAPI.Domain.Entities.Identity;
@@ -16,8 +18,10 @@ using EcommerceAPI.Persistence.Repositories.Basket;
 using EcommerceAPI.Persistence.Repositories.BasketItem;
 using EcommerceAPI.Persistence.Repositories.CompletedOrder;
 using EcommerceAPI.Persistence.Repositories.Customer;
+using EcommerceAPI.Persistence.Repositories.Endpoint;
 using EcommerceAPI.Persistence.Repositories.File;
 using EcommerceAPI.Persistence.Repositories.InvoiceFile;
+using EcommerceAPI.Persistence.Repositories.Menu;
 using EcommerceAPI.Persistence.Repositories.Order;
 using EcommerceAPI.Persistence.Repositories.Product;
 using EcommerceAPI.Persistence.Repositories.ProductImageFile;
@@ -60,6 +64,10 @@ namespace EcommerceAPI.Persistence
             services.AddScoped<IBasketItemWriteRepository, BasketItemWriteRepository>();
             services.AddScoped<ICompletedOrderReadRepository, CompletedOrderReadRepository>();
             services.AddScoped<ICompletedOrderWriteRepository, CompletedOrderWriteRepository>();
+            services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
+            services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
+            services.AddScoped<IMenuReadRepository, MenuReadRepository>();
+            services.AddScoped<IMenuWriteRepository, MenuWriteRepository>();
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
@@ -68,6 +76,7 @@ namespace EcommerceAPI.Persistence
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IEndpointAuthorizationService, EndpointAuthorizationService>();
         }
     }
 }

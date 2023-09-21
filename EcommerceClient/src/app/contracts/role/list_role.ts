@@ -1,4 +1,4 @@
 export class List_Role{
-    id: string;
-    name:string 
+    id?: string;
+    name?:string 
 }
