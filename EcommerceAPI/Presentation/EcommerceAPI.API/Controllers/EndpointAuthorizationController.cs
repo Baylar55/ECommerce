@@ -17,7 +17,7 @@ namespace EcommerceAPI.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost("get-roles-to-endpoint")]
+        [HttpPost("[action]")]
         public async Task<IActionResult> GetRolesToEndpoint(GetRolesToEndpointQueryRequest getRolesToEndpointQueryRequest)
         {
             GetRolesToEndpointQueryResponse response = await _mediator.Send(getRolesToEndpointQueryRequest);

@@ -9,18 +9,18 @@ export class AuthorizationEndpointService {
 
   constructor(private httpClientService: HttpClientService) { }
 
-  async assignRoleEndpoint(roles: string[], code: string, menu: string, successCallBack?: ()=>void, errorCallBack?:(error)=>void){
+  async assignRoleEndpoint(roles: string[], code: string, menu: string, successCallBack?: () => void, errorCallBack?: (error) => void) {
     const observable: Observable<any> = this.httpClientService.post({
-      controller:"EndpointAuthorization"
-    },{
+      controller: "EndpointAuthorization"
+    }, {
       roles: roles,
-      code:code,
+      code: code,
       menu: menu
     })
 
     const promiseData = observable.subscribe({
-      next:successCallBack,
-      error:errorCallBack
+      next: successCallBack,
+      error: errorCallBack
     });
 
     await promiseData;
@@ -29,7 +29,7 @@ export class AuthorizationEndpointService {
   async getRolesToEndpoint(code: string, menu: string, successCallBack?: ()=>void, errorCallBack?:(error)=>void):Promise<string[]>{
     const observable: Observable<any> = this.httpClientService.post({
       controller:"EndpointAuthorization",
-      action:"get-roles-to-endpoint"
+      action: "GetRolesToEndpoint"
     },{
       code:code,
       menu: menu

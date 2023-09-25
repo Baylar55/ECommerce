@@ -2,6 +2,7 @@
 using EcommerceAPI.Application.CustomAttributes;
 using EcommerceAPI.Application.DTOs.Configuration;
 using EcommerceAPI.Application.Enums;
+using EcommerceAPI.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -28,7 +29,7 @@ namespace EcommerceAPI.Infrastructure.Services.Configurations
             {
                 foreach (var controller in controllers)
                 {
-                    var actions = controller.GetMethods().Where(m => m.IsDefined(typeof(AuthorizeDefinitionAttribute), true));
+                    var actions = controller.GetMethods().Where(m => m.IsDefined(typeof(AuthorizeDefinitionAttribute)   ));
 
                     if (actions != null)
                     {

@@ -4,6 +4,8 @@ using EcommerceAPI.Application.Repositories.Endpoint;
 using EcommerceAPI.Application.Repositories.Menu;
 using EcommerceAPI.Domain.Entities;
 using EcommerceAPI.Domain.Entities.Identity;
+using EcommerceAPI.Persistence.Repositories.Endpoint;
+using EcommerceAPI.Persistence.Repositories.Menu;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -40,15 +42,20 @@ namespace EcommerceAPI.Persistence.Services
                 _menu = new()
                 {
                     Id = Guid.NewGuid(),
-                    Name = menu,
+                    Name = menu
                 };
-
                 await _menuwriteRepository.AddAsync(_menu);
+
+                await _menuwriteRepository.SaveAsync();
             }
+
             Endpoint? endpoint = await _endpointReadRepository.Table.Include(e => e.Menu).Include(e => e.AppRoles).FirstOrDefaultAsync(e => e.Code == code && e.Menu.Name == menu);
+
             if (endpoint == null)
             {
-                var action = _applicationService.GetAuthorizeDefinitionEndpoint(type).FirstOrDefault(m => m.Name == menu)?.Actions.FirstOrDefault(e => e.Code == code);
+                var action = _applicationService.GetAuthorizeDefinitionEndpoint(type)
+                        .FirstOrDefault(m => m.Name == menu)
+                        ?.Actions.FirstOrDefault(e => e.Code == code);
 
                 endpoint = new()
                 {
@@ -57,7 +64,7 @@ namespace EcommerceAPI.Persistence.Services
                     HttpType = action.HttpType,
                     Definition = action.Definition,
                     Id = Guid.NewGuid(),
-                    Menu = _menu,
+                    Menu = _menu
                 };
 
                 await _endpointwriteRepository.AddAsync(endpoint);
