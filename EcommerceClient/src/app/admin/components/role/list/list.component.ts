@@ -29,7 +29,7 @@ export class ListComponent extends BaseComponent implements OnInit{
       messageType:MessageType.Error,
       position:Position.TopRight
     }))
-
+    console.log(allRoles);
     this.dataSource = new MatTableDataSource<List_Role>(allRoles.datas);
     this.paginator.length = allRoles.totalCount;
    }
@@ -39,6 +39,7 @@ export class ListComponent extends BaseComponent implements OnInit{
    }
   
    async ngOnInit()  {
+    await this.getRoles();
     await this.getRoles();
    }
 }

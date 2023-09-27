@@ -29,7 +29,7 @@ namespace EcommerceAPI.Infrastructure.Services.Configurations
             {
                 foreach (var controller in controllers)
                 {
-                    var actions = controller.GetMethods().Where(m => m.IsDefined(typeof(AuthorizeDefinitionAttribute)   ));
+                    var actions = controller.GetMethods().Where(m => m.IsDefined(typeof(AuthorizeDefinitionAttribute)));
 
                     if (actions != null)
                     {
