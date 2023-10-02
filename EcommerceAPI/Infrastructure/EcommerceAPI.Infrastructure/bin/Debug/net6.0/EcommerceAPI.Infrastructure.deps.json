@@ -10,7 +10,8 @@
         "dependencies": {
           "Azure.Storage.Blobs": "12.16.0",
           "EcommerceAPI.Application": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.16"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.16",
+          "QRCoder": "1.4.3"
         },
         "runtime": {
           "EcommerceAPI.Infrastructure.dll": {}
@@ -356,6 +357,14 @@
           }
         }
       },
+      "QRCoder/1.4.3": {
+        "runtime": {
+          "lib/net6.0/QRCoder.dll": {
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
+          }
+        }
+      },
       "System.ComponentModel.Annotations/5.0.0": {},
       "System.Diagnostics.DiagnosticSource/4.6.0": {},
       "System.IdentityModel.Tokens.Jwt/6.10.0": {
@@ -649,6 +658,13 @@
       "sha512": "sha512-qbf1NslutDB4oLrriYTJpy7oB1pbh2ej2lEHd2IPDQH9C74ysOdhU5wAC7KoXblldbo7YsNR2QYFOqQM/b0Rsg==",
       "path": "microsoft.identitymodel.tokens/6.10.0",
       "hashPath": "microsoft.identitymodel.tokens.6.10.0.nupkg.sha512"
+    },
+    "QRCoder/1.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fWuFqjm8GTlEb2GqBl3Hi8HZZeZQwBSHxvRPtPjyNbT82H0ff0JwavKRBmMaXCno1Av6McPC8aJzri0Mj2w9Jw==",
+      "path": "qrcoder/1.4.3",
+      "hashPath": "qrcoder.1.4.3.nupkg.sha512"
     },
     "System.ComponentModel.Annotations/5.0.0": {
       "type": "package",

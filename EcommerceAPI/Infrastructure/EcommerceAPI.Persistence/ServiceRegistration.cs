@@ -77,6 +77,7 @@ namespace EcommerceAPI.Persistence
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IEndpointAuthorizationService, EndpointAuthorizationService>();
+            services.AddScoped<IProductService, ProductService>();
         }
     }
 }
