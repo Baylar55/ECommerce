@@ -1,52 +1,43 @@
-# ECommerce
-Mini Ecommerce Project is a web application designed to showcase a simple ecommerce functionality using Angular for the frontend and ASP.NET Core 6 Web API for the backend. It allows users to browse, view, and purchase products from an online store.
+# ECommerce API
 
-# Table of Contents
-Mini Ecommerce Project
-Installation
-Usage
-Features
-Contributing
-License
-Contact Information
-Acknowledgements
-Installation
+## Overview
 
-# To install Mini Ecommerce Project, follow these steps:
+The ECommerce API is a robust .NET web API designed to facilitate an online shopping platform. Built using modern architectural patterns and best practices, this API supports various features to enhance user experience and administrative control.
 
-Make sure you have the latest versions of Node.js and .NET 6 SDK installed on your machine.
-Clone the repository from [GitHub repository URL].
-Navigate to the client directory in the cloned repository and run npm install to install the frontend dependencies.
-Navigate to the server directory in the cloned repository and run dotnet restore to install the backend dependencies.
-Set up your database by running the necessary migrations using dotnet ef database update command.
-Build the solution by running dotnet build command.
+## Features
 
-# Usage
-To use Mini Ecommerce Project, follow these steps:
+### Server-Side
 
-Run the backend API by navigating to the server directory and executing dotnet run command to start the ASP.NET Core Web API server.
-Run the frontend application by navigating to the client directory and executing npm start command to start the Angular development server.
-Access the application in your web browser by navigating to http://localhost:4200/ to interact with the ecommerce functionality.
-Browse, view, and purchase products from the online store, add them to the cart, and complete the checkout process.
+- **Architecture**: Implemented using Onion Architecture, promoting separation of concerns and maintainability.
+- **Database**: Utilizes PostgreSQL for efficient data storage and retrieval.
+- **CQRS and Mediator**: Applied the Command Query Responsibility Segregation (CQRS) pattern with Mediator for improved handling of requests and responses.
+- **Repository Pattern**: Ensured a clean separation between data access and business logic.
+- **Authentication**:
+  - **Token Authentication**: Integrated access and refresh tokens for secure user authentication.
+  - **Social Authentication**: Enabled Google and Facebook authentication for user convenience.
+- **File Storage**: Used Azure Blob Storage for storing product images and other files.
+- **Logging**: Implemented Serilog for comprehensive logging and error tracking.
+- **Real-Time Communication**: Leveraged SignalR for real-time notifications and updates.
+- **Email Notifications**: Configured SMTP to send email notifications for order confirmations and other alerts.
+- **Role-Based Access Control**: Added role permission filters to secure endpoints based on user roles.
+- **QR Code Integration**: Implemented QR codes for products; users can scan codes to view product details instantly.
 
-# Features
+### Client-Side
 
-Mini Ecommerce Project includes the following features:
+- **Framework**: Built with Angular for a dynamic and responsive user interface.
+- **UI Components**: Utilized Bootstrap for layout, along with Angular Material for modern design components.
+- **Notifications**: Integrated AlertifyJS and Toastr for user feedback and alerts.
+- **Loading Indicators**: Employed ngx-spinner to indicate loading states during data operations.
+- **File Uploads**: Implemented `ngx-file-drop` for an intuitive drag-and-drop file upload experience.
 
-Browse and view products: Users can browse and view products from the online store, including product details and images.
-Add products to cart: Users can add products to the cart, and the cart will display the total price and quantity of items.
-Complete checkout process: Users can complete the checkout process by providing shipping and payment information.
-Authentication and authorization: Users can register, login, and logout, and certain actions like checkout may require authentication.
-Admin panel: Admin users can manage products, including adding, updating, and deleting products.
-Search and filter: Users can search for products by name and filter products by category or price range.
-# Contributing
-Contributions to Mini Ecommerce Project are welcome! If you would like to contribute, please follow the guidelines in the CONTRIBUTING.md file.
+### Admin Features
 
-# License
-Mini Ecommerce Project is released under the MIT License.
+- **Admin Dashboard**: Admins can view and manage all orders placed through the platform.
+- **User Management**: Admins have the ability to grant specific permissions to users for various endpoints, ensuring appropriate access control.
 
-# Contact Information
-For any questions, issues, or feedback related to Mini Ecommerce Project, please contact [Your Name] at [Your Email Address].
+## Functionalities
 
-# Acknowledgements
-[List any acknowledgements, resources, or libraries used in the project]
+- **CRUD Operations**: Perform create, read, update, and delete operations on products.
+- **Filtering**: Users can filter products based on various criteria for easier navigation.
+- **Authentication**: Secure user authentication using token-based and social login methods.
+- **Ordering**: Users can place orders, and receive SMS notifications upon order confirmation.
